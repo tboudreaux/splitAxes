@@ -1,0 +1,12 @@
+pyproject.toml
+setup.cfg
+setup.py
+src/splitAxes/__init__.py
+src/splitAxes/multiAxes.py
+src/splitAxes.egg-info/PKG-INFO
+src/splitAxes.egg-info/SOURCES.txt
+src/splitAxes.egg-info/dependency_links.txt
+src/splitAxes.egg-info/requires.txt
+src/splitAxes.egg-info/top_level.txt
+src/splitAxes/gridder/__init__.py
+src/splitAxes/gridder/gridder.py
