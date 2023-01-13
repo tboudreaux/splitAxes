@@ -49,3 +49,7 @@ axs[1,0].fill_between([0,10], 0.3, alpha=0.5, color='blue')
 
 plt.show()
 ```
+
+This should produce an output that looks something like
+
+![Example Output](tests/ExampleOutput.png?raw=true "Example Output")
