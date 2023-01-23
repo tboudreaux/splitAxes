@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 name="splitAxes"
 authors = [
 	{name = "Thomas M. Boudreaux", email="thomas@boudreauxmail.com"},
+	{name = "Keighley E. Rockcliffe", email="keighrockcliffe@gmail.com"},
 	]
 description="A split module for easily generating matplotlib figures with split x axes"
 readme="README.md"
