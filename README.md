@@ -1,3 +1,4 @@
+![version](https://badgen.net/pypi/v/splitAxes)
 # Simple Split X axes for matplotlib
 
 Use gridspec to generate nxm grids of figures where the x axis on each figure
