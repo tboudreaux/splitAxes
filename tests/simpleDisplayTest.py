@@ -15,7 +15,7 @@ Y = np.exp(-(X-0)**2) + np.exp(-(X-10)**2) + np.exp(-(X-20)**2)
 axs[0,0].set_xlim(0,45)
 axs[0,0].set_ylabel("Bob")
 axs[1,0].plot(X,Y, color='green')
-axs[1,1].scatter([0,3,4],[5,4,2])
+axs[1,1].scatter([0,3,4, 8],[5,4,2, 7])
 axs[0,1].set_xlabel("Dave", position="manual", labelpos=0.67)
 
 axs[1,0].fill_between([0,10], 0.3, alpha=0.5, color='blue')
