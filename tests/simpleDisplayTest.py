@@ -20,5 +20,6 @@ axs[0,1].set_xlabel("Dave", position="manual", labelpos=0.67)
 
 axs[1,0].fill_between([0,10], 0.3, alpha=0.5, color='blue')
 
+fig.savefig("ExampleOutput.png")
 plt.show()
 # print(axs[0,0].get_xlim())
