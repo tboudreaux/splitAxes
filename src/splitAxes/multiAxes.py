@@ -53,7 +53,7 @@ class multiAxes:
     def _calc_linear_auto_limits(self, x, overshoot=True):
         limits = list()
         domainSize = max(x) - min(x)
-        inset = -0.05*domainSize if overshoot else 0
+        inset = 0.025*domainSize if overshoot else 0
         domainStart = min(x) - inset
         domainEnd = max(x) + inset
         axisLimitSize = (domainSize / len(self.axes)) + (2*inset)/len(self.axes)
@@ -69,8 +69,8 @@ class multiAxes:
     def _calc_auto_x_limits(self, x, limType='linear', recursionDepth=None):
         limits = self._calc_linear_auto_limits(x)
         currentLimits = self.get_xlim()
-        if currentLimits[0] <= limits[0][0]: limits = self._calc_linear_auto_limits([currentLimits[0], limits[-1][1]], overshoot=False)
-        if currentLimits[1] >= limits[-1][1]: limits = self._calc_linear_auto_limits([limits[0][0], currentLimits[1]], overshoot=False)
+        if currentLimits[0] <= limits[0][0]: limits = self._calc_linear_auto_limits([currentLimits[0], limits[-1][1]], overshoot=True)
+        if currentLimits[1] >= limits[-1][1]: limits = self._calc_linear_auto_limits([limits[0][0], currentLimits[1]], overshoot=True)
         return limits
 
     def _auto_limits(self, x, limits, limType):
