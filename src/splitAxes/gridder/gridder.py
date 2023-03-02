@@ -8,9 +8,11 @@ from matplotlib import gridspec
 def split_grid(figRows, figColums, splitMatrix, figsize=(10,7)):
     gridNcols = np.lcm.reduce((splitMatrix.ravel()+1)*figColums)
     splitsPerRow = gridNcols // figColums
+    hr = 1/(np.ones(shape=(figRows+1,))*(figRows+1))
+    hr[-1] = 0.1*hr[-1]
 
     fig = plt.figure(figsize=figsize, constrained_layout=True)
-    grid = gridspec.GridSpec(ncols=gridNcols,nrows=figRows, figure=fig)
+    grid = gridspec.GridSpec(ncols=gridNcols,nrows=figRows+1, figure=fig, height_ratios=hr)
 
     axes = np.empty(shape=(figRows, gridNcols), dtype='object')
     figureFractionalWidth = 1 / figColums
